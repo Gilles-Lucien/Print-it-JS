@@ -88,5 +88,3 @@ function slider() {
 
 // Appel de la fonction maitresse "slider"
 slider();
-
-console.log(bannerTagline.innerHTML);
