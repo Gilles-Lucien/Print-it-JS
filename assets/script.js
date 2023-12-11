@@ -23,7 +23,6 @@ function updateSlide() {
 	});
 	bannerImg.src = `./assets/images/slideshow/${slides[slideActive].image}`;
 	bannerTagline.innerHTML = `${slides[slideActive].tagLine}`;
-	console.log(slideActive);
 }
 
 //Fonction to scroll to the right
