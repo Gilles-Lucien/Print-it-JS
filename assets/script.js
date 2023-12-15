@@ -20,6 +20,11 @@ for (let i = 0; i < numberOfImages; i++) {
   bulletPointsHTML += `"></span>`;
 }
 
+// I that you can refactor the code above using the following line, but I don't understand it, so I'll leave it as is for now
+// bulletPointsHTML = Array.from({ length: numberOfImages }, (_, i) => `<span class="dot${i === 0 ? " dot_selected" : ""}"></span>`).join("");
+
+
+
 bulletPoints.innerHTML = bulletPointsHTML;
 
 // Function to update the active slide
