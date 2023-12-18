@@ -1,4 +1,4 @@
-// Configuration du tableau des slides
+// Config of the slides and their taglines
 
 const slides = [
   {
