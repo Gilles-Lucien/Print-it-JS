@@ -19,13 +19,10 @@ for (let i = 0; i < numberOfImages; i++) {
   }
   bulletPointsHTML += `"></span>`;
 }
-
-// I that you can refactor the code above using the following line, but I don't understand it, so I'll leave it as is for now
+bulletPoints.innerHTML = bulletPointsHTML;
+// I saw that you can refactor the code above using the following line, but I don't understand it, so I'll leave it as is for now
 // bulletPointsHTML = Array.from({ length: numberOfImages }, (_, i) => `<span class="dot${i === 0 ? " dot_selected" : ""}"></span>`).join("");
 
-
-
-bulletPoints.innerHTML = bulletPointsHTML;
 
 // Function to update the active slide
 function updateSlide() {
@@ -55,21 +52,32 @@ function nextSlide(arrowDirection) {
 // let bulletPoints = document.querySelector(".dots");
 // let nombreImages = slides.length;
 
-// for (let i = 0; i < nombreImages; i++) {
-//   bulletPoints.innerHTML += `<span class="dot${
-//     i === 0 ? " dot_selected" : ""
-//   }"></span>`;
-// }
 
-// // Function to update the active slide
-// function updateSlide() {
-//   const dots = document.querySelectorAll(".dot");
-//   dots.forEach((dot, index) => {
-//     dot.classList.toggle("dot_selected", index === slideActive);
-//   });
-//   bannerImg.src = `./assets/images/slideshow/${slides[slideActive].image}`;
-//   bannerTagline.innerHTML = `${slides[slideActive].tagLine}`;
+// for (let i = 0; i < numberOfImages; i++) {
+//   bulletPointsHTML += `<span class="dot`;
+//   if (i === 0) {
+//     bulletPointsHTML += " dot_selected";
+//   }
+//   bulletPointsHTML += `"></span>`;
 // }
+// bulletPoints.innerHTML = bulletPointsHTML;
+
+
+
+
+// // Event listeners for arrows
+// flechedroite.addEventListener("click", function () {
+//   sensFleche = 1;
+//   nextSlide(sensFleche);
+//   return slideActive;
+// });
+
+// flechegauche.addEventListener("click", function () {
+//   sensFleche = 0;
+//   nextSlide(sensFleche);
+//   return slideActive;
+// });
+
 
 // // Function to change the slide based on the arrow clicked
 // function nextSlide(sensFleche) {
@@ -90,15 +98,13 @@ function nextSlide(arrowDirection) {
 //   return slideActive;
 // }
 
-// // Event listeners for arrows
-// flechedroite.addEventListener("click", function () {
-//   sensFleche = 1;
-//   nextSlide(sensFleche);
-//   return slideActive;
-// });
 
-// flechegauche.addEventListener("click", function () {
-//   sensFleche = 0;
-//   nextSlide(sensFleche);
-//   return slideActive;
-// });
+// // Function to update the active slide
+// function updateSlide() {
+//   const dots = document.querySelectorAll(".dot");
+//   dots.forEach((dot, index) => {
+//     dot.classList.toggle("dot_selected", index === slideActive);
+//   });
+//   bannerImg.src = `./assets/images/slideshow/${slides[slideActive].image}`;
+//   bannerTagline.innerHTML = `${slides[slideActive].tagLine}`;
+// }
